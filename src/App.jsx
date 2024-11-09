@@ -1,17 +1,22 @@
 import { useState } from 'react'
-import Heading from './components/ui/Heading'
+import Heading from './components/Heading'
 import SaveForm from './components/SaveFrom'
-
+import SignupForm from './components/Signup'
+import Auth from './pages/Auth'
+import { createBrowserRouter, createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
+import Layout from './layout/layout'
 
 function App() {
+  const router=createBrowserRouter( 
+    createRoutesFromElements(
+      <Route path="/" element={<Layout/>}>
+        <Route path="auth" element={<Auth/>}/>
+      </Route>
+      
+    )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  ) 
   return (
-    <div className='h-[100vh]  bg-[#e0f7fa] p-2 '>
-     <Heading/>
-     <div className='editor mt-8 '>
-      <SaveForm/>
-     </div>
-    
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 

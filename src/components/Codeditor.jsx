@@ -28,7 +28,7 @@ export default function Codeditor() {
             "ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
         }}
       />
-      <Select
+      {/* <Select
         onValueChange={(e) => {
           setLanguage(e);
         }}
@@ -43,7 +43,7 @@ export default function Codeditor() {
           <SelectItem value="js">Javascript</SelectItem>
 
         </SelectContent>
-      </Select>
+      </Select> */}
     </div>
   );
 }
